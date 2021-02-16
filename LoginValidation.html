@@ -1,0 +1,66 @@
+<html>
+<head>
+<style type="text/css">
+span
+{
+color: red;
+}
+</style>
+</head>
+<body>
+<script>  
+function validateForm(){  
+var name=document.getElementById("uname").value;
+//var name=document["myform"]["name'].value;  
+var password=document.myform.password.value;  
+var pattern = /^[A-Za-z]+$/;
+//var pattern1=/^[-+]?[0-9]+\.[0-9]+$/;
+var flag=true;
+var msg,msg1;
+if (name==null || name==""){  
+  msg="* Username is required";  
+document.getElementById("nameerror").innerText=msg;
+ flag=false;  
+}
+
+   if(name.length >0 )
+     {
+ if(!name.match(pattern))
+{
+      msg="*Name can contain alphabets only";
+     document.getElementById("nameerror").innerText=msg;
+      flag=false;
+     }
+else
+{
+ document.getElementById("nameerror").innerText="";
+}
+}
+
+if (password==null || password==""){  
+  msg1="*Password is required";  
+document.getElementById("passworderror").innerText=msg1;
+ flag=false;  
+}
+
+
+ if(password.length>0 && password.length<6){  
+  msg1="*Password must be at least 6 characters long.";  
+ document.getElementById("passworderror").innerText=msg1;
+  flag=false;  
+  } 
+return flag; 
+}  
+</script>  
+<body>  
+<form name="myform" method="post" action="" onsubmit="return validateForm()" >  
+Name: <input type="text" name="name" id="uname">
+<span id="nameerror">*</span><br/>  
+Password: <input type="password" name="password">
+<span id="passworderror">*</span><br/>  
+<input type="submit" value="Login">  
+</form>  
+</body>
+</html>
+
+ 
