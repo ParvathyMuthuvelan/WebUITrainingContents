@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Arrays</h2>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<script>
+var cars = ["Maruti", "Hyundai", "BMW"];
+document.getElementById("demo").innerHTML = cars;
+var cars1 = new Array("Saab", "Volvo", "BMW");
+var len= cars1.length;
+document.getElementById("demo1").innerHTML = cars1;
+document.write("<br>Array size="+len);
+var sortedArray = cars.sort();
+document.write("<br>After sorting array ="+cars);
+var reversedArray=cars.reverse();
+document.write("<br>After reversing array ="+cars);
+
+var text = "<ul>";
+for (i = 0; i < len; i++) {
+  text += "<li>" + cars[i] + "</li>";
+}
+text += "</ul>";
+document.getElementById("demo").innerHTML = text;
+cars.push("Jeep");
+document.write("<br>After adding element array ="+cars);
+/*document.getElementById("demo1").innerHTML = cars
+document.getElementById("demo").innerHTML = cars.toString();*/
+document.getElementById("demo").innerHTML = cars.join(" * ");
+var poppedElement=cars.pop();
+document.write("<br>Removed element ="+poppedElement);
+cars.push("Etios");
+document.write("<br>After adding array ="+cars);
+delete cars[0]; 
+document.write("<br>After deleting array ="+cars);
+</script>
+
+</body>
+</html>
