@@ -1,16 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<body>
-<p id="demo"></p>
-<script>
- var x = 10;
-  document.getElementById("demo").innerHTML = (x === "10");
-</script>
+<head>
+<style type="text/css">
+p.intro {
+  background-color: yellow;
+  color: blue;
+}
+div,p {
+  background-color: cyan;
+}
+h1, h2, h3 
+{ 
+font-family: sans-serif ;
+color: yellow;
+}
+</style>
 
+</head>
+<body >
+<h1>CSS Selectors</h1>
+<h2>Heading 2</h2>
+<h3 > Universal Selector</h3>
 
-
-
-
-
+<p class="intro">
+First paragraph
+</p>
+<p class="intro">
+Second paragraph
+</p>
+<p >
+third paragraph
+</p>
+<div >
+Division1
+<p> Paragraph inside div</p>
+</div>
+<div >
+Division2
+</div>
 </body>
-</html> 
+</html>
+
