@@ -1,0 +1,27 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+  <title>Web Storage API</title>  
+  <style>  
+    body{  
+      color: green;  
+      text-align: center;  
+      font-size: 30px;  
+      margin-top: 30px;  
+      font-style: italic;  
+    }  
+  </style>  
+</head>  
+<body>  
+<script>  
+ if(typeof(Storage)!=="undefined") {  
+  localStorage.setItem("name","Sai");  
+  localStorage.setItem("Country", "India");  
+   document.write("Hi"+" "+localStorage.name+" "+"from" +" "+ localStorage.Country);  
+}  
+ else{  
+  alert("Sorry! your browser is not supporting the browser")  
+ }  
+</script>  
+</body>  
+</html>

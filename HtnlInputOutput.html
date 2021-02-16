@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+
+<html>
+   <head>
+      <script type = "text/javascript">
+         
+         function showResult() {
+            x = document.forms["myform"]["inputvalue"].value;
+            document.forms["myform"]["result"].value = x;
+         }
+      </script>
+   </head>
+   
+   <body>
+
+      <form action = "" method = "get" name = "myform">
+         Enter a value : <input type = "text" name = "inputvalue" required/>
+         <input type = "button" autofocus value = "Result"  onclick = "showResult();" />
+         <output name = "result"></output>
+      </form>
+		
+   </body>
+</html>

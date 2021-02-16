@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head> 
+  <style>
+    div{
+      background-color: pink;
+      height: 50px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Example of counter Using Session Storage</h2>
+  <button onclick="counter();">click me</button>
+  <div id="output">See the result here:</div>
+  <script type="text/javascript">
+    function counter() {
+     if(sessionStorage.count){
+      sessionStorage.count=Number(sessionStorage.count)+1;
+}
+ else{
+//sessionStorage.setItem("count",1);
+  sessionStorage.count=1;
+ }
+alert(document.getElementById('output'));
+ document.getElementById('output').innerHTML= "<b>You have clicked counter button for"+ " "+ sessionStorage.count +" "+"times</b>";
+}
+  </script>
+ <p>Click the counter button to see the total counts. </p>
+ <p>Now, if you close the browser then it will reset to initial value. </p>
+</body>
+</html>
+
+ 
