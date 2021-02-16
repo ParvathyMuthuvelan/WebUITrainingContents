@@ -1,0 +1,77 @@
+<!DOCTYPE html>    
+<html>    
+<head>    
+    <title>Open DataBase</title>    
+    <script>    
+        var Database_Name = 'MyDatabase';    
+        var Version = 1.0;    
+        var Text_Description = 'Web-SQL';    
+        var Database_Size = 2 * 1024 * 1024;    
+        var dbObj = openDatabase(Database_Name, Version, Text_Description, Database_Size);    
+        dbObj.transaction(function (tx) {    
+            tx.executeSql('CREATE TABLE IF NOT EXISTS Employee_Table (id unique, Name, Location)');    
+        });    
+    
+        function Insert() {    
+
+            var id = document.getElementById("tbID").value;    
+            var name = document.getElementById("tbName").value;    
+            var location = document.getElementById("tbLocation").value;    
+            dbObj.transaction(function (tx) {    
+                tx.executeSql('insert into Employee_Table(id, Name, Location) values(' + id + ',"' + name + '","' + location + '")');  
+alert('inserted');
+            });    
+        }    
+        dbObj.transaction(function (tx) {    
+            tx.executeSql('SELECT * FROM Employee_Table', [], function (tx, results) {    
+                var len = results.rows.length, i;    
+                var str = '';    
+                for (i = 0; i < len; i++) {    
+                str += "<tr>";    
+                str += "<td>" + results.rows.item(i).id + "</td>";    
+                str += "<td>" + results.rows.item(i).Name + "</td>";    
+                str += "<td>" + results.rows.item(i).Location + "</td>";    
+                str += "</tr>";    
+                document.getElementById("tblGrid").innerHTML += str;    
+                str = '';    
+                }    
+            }, null);    
+        });    
+    </script>    
+</head>    
+<body>    
+    <p id="hh"></p>    
+    <form id="frm1">    
+        <table>    
+            <tr>    
+                <td>ID:</td>    
+                <td><input type="text" id="tbID" /></td>    
+            </tr>    
+            <tr>    
+                <td>Name:</td>    
+                <td><input type="text" id="tbName" /></td>    
+            </tr>    
+            <tr>    
+                <td>Location:</td>    
+                <td><input type="text" id="tbLocation" /></td>    
+            </tr>    
+            <tr>    
+                <td><button id="btnInsert" onclick="Insert()">Insert</button></td>    
+            </tr>    
+        </table>    
+    </form>    
+    <table id="tblGrid" cellpadding="10px" cellspacing="0" border="1">    
+        <tr style="background-color:black;color:white;font-size:18px;">    
+            <td>    
+                ID    
+            </td>    
+            <td>    
+                Name    
+            </td>    
+            <td>    
+                Location    
+            </td>    
+        </tr>    
+    </table>    
+</body>    
+</html>  
