@@ -1,0 +1,45 @@
+1)Create favorite list of websites into links and unordered list as shown in the screen below. When we click on the
+favorite link the respective page should open in a new tab. 
+. Google
+. Facebook
+. w3schools
+
+2) Add logos for the sites
+
+3)Implement the page in below two different ways:
+ Show the links one line after the other using DIV
+ Show the links adjacent to each other using SPAN 
+logo     logo           logo
+Google Facebook w3schools
+<div>
+logo     
+Google-link
+</div>
+
+logo 
+Facebook-link 
+logo
+w3schools-link
+
+4)Create a page employees.html showing the first name, last name and department in the table format.
+
+
+5)Create a page demonstrating HTML5 semantic tags. Name the file as semantics.html,
+which has header, navigation, section, article and footer sections with the details as
+shown below
+
+
+Header
+The scripting language I like the most
+
+Navigation Bar
+Html|CSS|Javascript
+
+Section
+Scripting Langages
+
+Article
+some text
+
+Footer
+Posted by tom@cognizant.com
