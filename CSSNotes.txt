@@ -1,0 +1,264 @@
+Content - The content of the box, where text and images appear
+Padding - Clears an area around the content. The padding is transparent
+Border - A border that goes around the padding and content
+Margin - Clears an area outside the border. The margin is transparent
+//Universal selector
+* will match all the elements of the document.
+* {
+    css declarations;
+}
+
+* {
+    background-color: yellow;
+}
+div * {
+    background-color: yellow;
+}
+//Element selector
+element {
+  css declarations;
+}
+p {
+  background-color: yellow;
+}
+element.class Selector
+p.intro {
+  background-color: yellow;
+}
+element element selector
+div p {
+  background-color: yellow;
+}
+//Group selectors
+h1 { font-family: sans-serif }
+h2 { font-family: sans-serif }
+h3 { font-family: sans-serif }
+is equivalent to:
+
+h1, h2, h3 { font-family: sans-serif }
+The block value of the display property forces an element to behave like block-level element, like a <div> or <p> element. 
+span {
+    display: block;
+}
+a {
+    display: block;
+}
+The inline value of the display property causes an element to behave as though it were an inline-level element, like a <span> or an <a> element.
+
+h1 {
+    display: none;
+}
+p {
+    display: none;
+}
+visibility: hidden; hides the element, but it still takes up space in the layout. Child element of a hidden box will be visible if their visibility is set to visible.
+display: none; turns off the display and removes the element completely from the document. It does not take up any space, even though the HTML for it is still in the source code. All child elements also have their display turned off, even if their display property is set to something other than none.
+
+div {
+  column-count: 3;
+}
+.newspaper {
+  column-count: 3;
+  column-gap: 40px;
+  column-rule: 1px solid lightblue;
+}
+
+h2 {
+  column-span: all;
+}
+/* This is a single-line comment */
+<h1 style="background-color:DodgerBlue;">Hello World</h1>
+<p style="background-color:Tomato;">Lorem ipsum...</p>
+
+<h1 style="color:Tomato;">Hello World</h1>
+<p style="color:DodgerBlue;">Lorem ipsum...</p>
+<p style="color:MediumSeaGreen;">Ut wisi enim...</p>
+
+<h1 style="border:2px solid Tomato;">Hello World</h1>
+<h1 style="border:2px solid DodgerBlue;">Hello World</h1>
+<h1 style="border:2px solid Violet;">Hello World</h1>
+
+<h1 style="background-color:rgb(255, 99, 71);">...</h1>
+<h1 style="background-color:#ff6347;">...</h1>
+<h1 style="background-color:hsl(9, 100%, 64%);">...</h1>
+
+text color
+body {
+  color: blue;
+}
+
+h1 {
+  color: green;
+}
+
+text color and background color
+body {
+  background-color: lightgrey;
+  color: blue;
+}
+
+h1 {
+  background-color: black;
+  color: white;
+}
+
+text-align - for horizontal alignment
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: left;
+}
+
+h3 {
+  text-align: right;
+}
+
+
+h1 {
+  text-decoration: overline;
+}
+
+h2 {
+  text-decoration: line-through;
+}
+
+h3 {
+  text-decoration: underline;
+}
+
+The text-indent property is used to specify the indentation of the first line of a text:
+p {
+  text-indent: 50px;
+}
+h1 {
+  letter-spacing: 3px;
+}
+
+p.italic {
+  font-style: italic;
+}
+
+.p1 {
+  font-family: "Times New Roman", Times, serif;
+}
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+a:hover MUST come after a:link and a:visited
+a:active MUST come after a:hover
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}
+
+<style>
+ul.a {
+  list-style-type: circle;
+}
+
+ul.b {
+  list-style-type: square;
+}
+
+ol.c {
+  list-style-type: upper-roman;
+}
+
+ol.d {
+  list-style-type: lower-alpha;
+}
+ul {
+  list-style-image: url('sqpurple.gif');
+}
+//css tables
+table, th, td {
+  border: 1px solid black;
+}
+table {
+  width: 100%;
+}
+
+CSS - Box Model
+The CSS box model is essentially a box that wraps around every HTML element.
+Content - The content of the box, where text and images appear
+Padding - Clears an area around the content. The padding is transparent
+Border - A border that goes around the padding and content
+Margin - Clears an area outside the border. The margin is transparent
+
+
+RWD - Media queries
+Media queries can be used to check many things, such as:
+
+width and height of the viewport
+width and height of the device
+orientation (is the tablet/phone in landscape or portrait mode?)
+resolution
+
+@media not|only mediatype and (expressions) {
+  CSS-Code;
+}
+
+The result of the query is true if the specified media type matches the type of device the document is being displayed on and all expressions in the media query are true. When a media query is true, the corresponding style sheet or style rules are applied, following the normal cascading rules.
+
+Unless you use the not or only operators, the media type is optional and the all type will be implied.
+
+all	Used for all media type devices
+print	Used for printers
+screen	Used for computer screens, tablets, smart-phones etc.
+
+
+body {
+  background-color: pink;
+}
+
+@media screen and (min-width: 480px) {
+  body {
+    background-color: lightgreen;
+  }
+}
+</style>
+
+The viewport is the user's visible area of a web page.
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).
+
+The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser.
