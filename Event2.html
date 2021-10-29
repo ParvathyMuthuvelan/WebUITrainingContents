@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+
+	<script type="text/javascript">
+		function showText()
+		{
+
+                       //getting the value entered in the first text box           
+	var message=document.getElementById("text1").value;
+		alert('You entered '+message);
+	//setting the value in the second text box     
+		document.getElementById("text2").value=message;
+//var message1=document.getElementById("s1").innerText;
+var message1=document.getElementById("s1");
+alert("span text="+message1);
+message1.innerText="<b>Span content changed</b>";
+//document.getElementById("s1").innerText="<b>Span content changed</b>";
+document.getElementById("s2").innerHTML="<b>Span content changed</b>";
+		}
+	</script>
+</head>
+<body>
+Enter text:<input id="text1" type="text" ></input><br>
+You entered:<input id="text2" type="text" ></input><br>
+<span id="s1">Replace the content with innerText</span><br>
+<span id="s2">Replace the content with innerHtml</span><br>
+<input type="button" onclick="showText();" value="Click">
+</body>
+</html>
+

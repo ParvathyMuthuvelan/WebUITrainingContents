@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+
+	<script>
+		function showText(msg)
+		{
+                                  var message=document.getElementById("text1").value;
+		alert('You entered '+message);
+		document.getElementById("text2").value=msg;
+		}
+	</script>
+</head>
+<body>
+Enter text:<input id="text1" type="text" onkeyup="showText(this.value)"></input>
+You entered:<input id="text2" type="text" ></input>
+</body>
+</html>
+
