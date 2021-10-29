@@ -1,0 +1,27 @@
+<html>
+   <head>   
+      <script type = "text/javascript">
+        
+            function over() {
+               //document.write ("Mouse Over");
+
+alert("div received focus");
+            }            
+            function out() {
+             //  document.write ("Mouse Out");
+alert("div loses focus");
+            }            
+        
+      </script>      
+   </head>
+   
+   <body>
+      <p>Bring your mouse inside the division to see the result:</p>      
+      <div id="div1" onmouseover = "over()"  onmouseout = "out()">
+         <h2> This is inside the division </h2>
+      </div>     
+<div  onmouseout = "out()">   
+Division2
+</div> 
+   </body>
+</html>

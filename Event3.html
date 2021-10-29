@@ -1,0 +1,33 @@
+<!doctype html>
+<head>
+
+<title>Insert title here</title>
+	<script>
+		function showText(msg)
+		{
+		
+		var name=document.loginForm.uname.value;
+		alert('You entered '+name);
+		document.getElementById("text2").value=msg;
+		}
+		function showMsg(txt)
+		{
+		alert(txt  + ' received focus');
+		
+		}
+	function myFunction() {
+  	alert('Hello');
+	}
+	</script>
+</head>
+<body>
+<form name="loginForm">
+Enter text:<input name="uname" type="text" onkeyup="showText(this.value)"></input>
+You entered:<input id="text2" type="text" ></input>
+<input type="text" name="username" onfocus="showMsg(this.name)">
+
+
+</form>
+<button onclick="setTimeout(myFunction, 3000)">Click</button>
+</body>
+</html>
