@@ -1,0 +1,26 @@
+<!doctype html>
+<head>
+       
+ <script type = "text/javascript">
+             
+var globalVar=50;//global variable  
+function a(){  
+var localVar=10;//local varibale
+alert("global variable="+globalVar);  
+alert("local variable="+localVar);  
+}  
+function b(){  
+alert("global variable="+globalVar);  
+alert("local variable of function a="+localVar);  
+}  
+</script>  
+     
+</head>
+<body>
+<input type="button" onclick="a();" value="Call function 1">
+<input type="button" onclick="b();" value="Call function 2">
+
+</body>
+</html>
+
+     
