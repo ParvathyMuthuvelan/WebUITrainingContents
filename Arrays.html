@@ -6,35 +6,47 @@
 
 <p id="demo"></p>
 <p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
 <script>
 var cars = ["Maruti", "Hyundai", "BMW"];
+var temp=cars[0].toUpperCase();
+document.write("<br>"+temp);
 document.getElementById("demo").innerHTML = cars;
 var cars1 = new Array("Saab", "Volvo", "BMW");
 var len= cars1.length;
 document.getElementById("demo1").innerHTML = cars1;
-document.write("<br>Array size="+len);
+document.write("<br>Array2 size="+len);
 var sortedArray = cars.sort();
-document.write("<br>After sorting array ="+cars);
+document.write("<br>After sorting first array ="+cars);
 var reversedArray=cars.reverse();
-document.write("<br>After reversing array ="+cars);
-
+document.write("<br>After reversing first array ="+cars);
+var result= cars1.indexOf("BMW"); 
+document.write("<br>Index of BMW in  second array ="+result);
 var text = "<ul>";
 for (i = 0; i < len; i++) {
-  text += "<li>" + cars[i] + "</li>";
+  text =text+ "<li>" + cars[i] + "</li>";
 }
 text += "</ul>";
-document.getElementById("demo").innerHTML = text;
+document.getElementById("demo2").innerHTML = text;
 cars.push("Jeep");
 document.write("<br>After adding element array ="+cars);
-/*document.getElementById("demo1").innerHTML = cars
-document.getElementById("demo").innerHTML = cars.toString();*/
-document.getElementById("demo").innerHTML = cars.join(" * ");
+
+document.getElementById("demo3").innerHTML = cars.toString();
+document.getElementById("demo4").innerHTML = cars.join(" * ");
 var poppedElement=cars.pop();
 document.write("<br>Removed element ="+poppedElement);
 cars.push("Etios");
 document.write("<br>After adding array ="+cars);
 delete cars[0]; 
 document.write("<br>After deleting array ="+cars);
+document.writeln(cars1);  
+var result=cars.concat(cars1);  
+document.writeln("<br> concatenated array="+result);  
+var arr=[2,4,1,8,5];  
+var result=arr.sort();  
+document.writeln("<br>"+result);  
 </script>
 
 </body>

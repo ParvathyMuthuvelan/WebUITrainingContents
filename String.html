@@ -9,16 +9,35 @@
 <p id="demo"></p>
 
 <script>
-//var str = "Please locate where 'locate' occurs!";
-/*var pos = str.indexOf("John");
-var pos = str.lastIndexOf("John");
-var slen = str.length;*/
+var str = "Hello World";
+var pos = str.indexOf("o");
+document.write("Index of o="+pos+"<br>");
+var pos = str.lastIndexOf("o");
+document.write("Last Index of o="+pos+"<br>");
+var slen = str.length;
 var str = "Apple, Banana, Kiwi";
 var ch=str.charAt(3);
-var res = str.slice(7, 13);
-//var res = str.slice(7);
 //var res = str.substring(7, 13);
-document.getElementById("demo").innerHTML = ch;
+document.write("<br>Character at 3rd index="+ ch);
+var text1 = "Hello World!";       // String
+var text2 = text1.toLowerCase(); 
+document.write("<br>"+text2);
+var text1 = "hello world!";       // String
+var text2 = text1.toUpperCase(); 
+document.write("<br>"+text2);
+var temp = "       Hello World!        ";
+document.write("<br>Before trim"+temp.length);
+var text=temp.trim()  ;
+document.write("<br>After trim "+text.length);
+document.write("<br>After trim "+text);
+var text="Microsoft";
+text=text.replace("Microsoft","W3Schools");
+document.write("<br>After replace "+text);
+var s1="hello";
+var s2="world";
+var s3="hai";
+s1=s1.concat(s2,s3);
+document.write("<br>After concat "+s1);
 </script>
 
 </body>
