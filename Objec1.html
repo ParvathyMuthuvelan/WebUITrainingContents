@@ -1,0 +1,52 @@
+<!doctype html>
+   <head>
+      <script type = "text/javascript">
+    //Creating object as literal
+emp={id:102,
+name:"Shyam Kumar",
+salary:40000}  
+document.write("Id :"+emp.id+"<br>"+"Name :"+emp.name+"<br>"+"Salary :"+emp.salary);  
+//Creating object using new keyword
+var emp=new Object();  
+emp.id=101;  
+emp.name="Ravi";  
+emp.salary=50000;  
+document.write("<br>Id :"+emp.id+"<br>"+"Name :"+emp.name+"<br>"+"Salary :"+emp.salary);  
+
+//Creating object using constructor
+function employee(id,name,salary){  
+this.id=id;  
+this.name=name;  
+this.salary=salary;  
+this.changeSalary=changeSalary;  
+function changeSalary(otherSalary){  
+this.salary=otherSalary;  
+}  
+}  
+
+e1=new employee(104,"Vimal",35000);
+document.write("<br>Id :"+e1.id+"<br>"+"Name :"+e1.name+"<br>"+"Salary :"+e1.salary);    
+e1.changeSalary(40000);
+document.write("<br>After changing salary Id :"+e1.id+"<br>"+"Name :"+e1.name+"<br>"+"Salary :"+e1.salary);    
+e2=new employee(105,"Sai",50000); 
+
+document.write("<br>Id :"+e1.id+"<br>"+"Name :"+e1.name+"<br>"+"Salary :"+e1.salary);  
+document.write("<br>Id :"+e2.id+"<br>"+"Name :"+e2.name+"<br>"+"Salary :"+e2.salary);  
+
+//creating class
+class Employee {  
+  constructor() {  
+    this.id=102;  
+    this.name = "Martin"; 
+this.salary=45000; 
+  }   
+}  
+var emp = new Employee();  
+document.write("<br>Id :"+emp.id+"<br>"+"Name :"+emp.name+"<br>"+"Salary :"+emp.salary);  
+</script>
+        
+</head>
+      <body>     
+   
+   </body>
+</html>
