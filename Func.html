@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+
+//anonymous function
+setTimeout(function () {
+    console.log('Execute later after 1 second')
+}, 1000);
+
+
+var hello;
+//arrow function
+hello = () => {
+  return "Hello World!";
+}
+
+</script>
+
+</head>
+<body>
+
+<p id="demo" onclick='document.getElementById("demo").innerHTML = hello();'>Paragraph</p>
+</body>
+</html>
