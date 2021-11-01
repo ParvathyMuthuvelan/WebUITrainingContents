@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+	div {
+ background-color: #41caf4;
+ padding: 15px;
+}
+div.first {
+ opacity: 0.2;
+ filter: alpha(opacity=20); /* For IE8 and earlier */
+}
+div.second {
+ opacity: 0.4;
+ filter: alpha(opacity=40); /* For IE8 and earlier */
+}
+div.third {
+ opacity: 0.8;
+ filter: alpha(opacity=80); /* For IE8 and earlier */
+}
+</head>
+</style>
+<body>
+
+	<h1>Div: default</h1>
+	<div>Default</div>
+
+	<h1>Div: first. Opacity 0.2.</h1>
+	<div class="first">First</div>
+
+	<h1>Div: second. Opacity: 0.4.</h1>
+	<div class="second">Second</div>
+
+	<h1>Div: third. Opacity: 0.8.</h1>
+	<div class="third">Third</div>
+
+	<p><strong>Note:</strong> The background-size property is not supported in Internet Explorer 8 and earlier versions.</p>
+
+</body>
+</html>
