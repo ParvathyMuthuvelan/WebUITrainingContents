@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+const PI=3.14;
+  var x = 0;
+ document.write("<br> Boolean(0) :"+Boolean(x));
+document.write("<br> Boolean(1) :"+Boolean(1));
+document.write("<br>Boolean(10 > 9):"+Boolean(10 > 9) );  
+document.write("<br>Boolean(10 < 9):"+Boolean(10 < 9) ); 
+var x = "";
+ document.write("<br> Boolean('') :"+Boolean(x));
+var x;
+ document.write("<br>"+x+": "+Boolean(x));
+var x = null;
+ document.write("<br>"+x+": "+Boolean(x));
+var x = false;
+ document.write("<br>"+Boolean(x));
+document.write("<br>NaN");
+document.write("<br> 123 is not a number "+isNaN(123));
+document.write("<br>-1.23 is not a number "+isNaN(-1.23)); 
+ document.write("<br> '123' is not a number "+isNaN('123')); 
+document.write("<br> Hello is not a number "+isNaN('Hello')); 
+document.write("<br>2005/12/12 is not a number "+isNaN('2005/12/12'))
+document.write("<br> true is not a number "+isNaN(true));
+document.write("<br> undefined is not a number "+isNaN(undefined) );
+
+</script>
+
+</body>
+</html>

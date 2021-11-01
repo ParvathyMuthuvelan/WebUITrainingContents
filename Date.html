@@ -10,15 +10,18 @@
 
 <script>
 var d = new Date(2018, 11, 24);
-//document.getElementById("demo").innerHTML = d;
-//document.getElementById("demo").innerHTML = d.getMonth() + 1;
-//document.getElementById("demo").innerHTML = d.getFullYear();
-document.getElementById("demo").innerHTML = Math.pow(8,2);
-/*document.getElementById("demo").innerHTML = Math.sqrt(64);
-document.getElementById("demo").innerHTML = Math.ceil(4.4);
-document.getElementById("demo").innerHTML = Math.floor(4.7);
-Math.min(0, 150, 30, 20, -8, -200);
-document.getElementById("demo").innerHTML = Math.random();*/
+var d1=new Date();
+document.write("<br>Date="+ d);
+document.write("<br>Date="+ d1);
+document.write("<br>Current Month "+ (d1.getMonth()+1)) ;
+document.write("<br>"+ d.getFullYear());
+document.write("<br>"+Math.pow(8,2));
+document.write("<br>"+Math.sqrt(64));
+document.write("<br>"+Math.ceil(4.4));
+document.write("<br>"+ Math.floor(4.7));
+document.write("<br>"+Math.min(0, 150, 30, 20, -8, -200));
+document.write("<br>"+Math.max(0, 150, 30, 20, -8, -200));
+document.write("<br>"+ Math.random());
 </script>
 
 </body>
