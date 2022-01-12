@@ -17,10 +17,13 @@
  if(typeof(Storage)!=="undefined") {  
   localStorage.setItem("name","Sai");  
   localStorage.setItem("Country", "India");  
-   document.write("Hi"+" "+localStorage.name+" "+"from" +" "+ localStorage.Country);  
+sessionStorage.setItem("count",1);
+document.write("Value in local storage");
+   document.write("Hi"+" "+localStorage.name+" "+"from" +" "+ localStorage.Country+"<br>");  
+document.write("Value stored in session storage="+sessionStorage.count);
 }  
  else{  
-  alert("Sorry! your browser is not supporting the browser")  
+  alert("Sorry! your browser is not supporting the storage")  
  }  
 </script>  
 </body>  
