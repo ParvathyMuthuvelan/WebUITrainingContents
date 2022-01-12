@@ -3,42 +3,92 @@
 <title>Registration Page</title>
 </head>
 <body>
+
 <header>
 <table>
 <tr>
-<td><img src="cognizant.png" height="100px" width="100px" alt="Image cannot be displayed"></td>
+<td><img src="" height="100px" width="100px" alt="Image"></td>
 <td><h3 > Registration Page </h3></td>
 </tr>
 </table>
 </header>
+
 <form action="success.html" method="post">
-Username : <input type="text" name="username" required > <br>
-Password<input type="password" name="passwd" required><br>
+<table>
+<tr>
+<td>Username :</td>
+<td> <input type="text" name="username" required > </td>
+</tr>
+
+<tr>
+<td>Password :</td>
+<td><input type="password" name="passwd" required>
+</td>
+</tr>
+
+<tr>
+<td>
 Gender :
-<label for="male">Male</label>
+</td>
+<td>Male 
 <input type="radio" id="male" name="gender" value="Male">
+Female
+<input type="radio" id="female" name="gender" value="Female"> 
+</td>
+</tr>
 
-<label for="female">Female</label>
-<input type="radio" id="female" name="gender" value="Female"> <br>
-Email : <input type="email" name="email" required> <br>
-Date of Birth : <input type="date" name="dob"><br>
+<tr>
+<td>
+Email : </td> <td><input type="email" name="email" required> 
+</td>
+</tr>
 
-Address :<textarea name="address" rows="10" cols="30"> </textarea> <br>
-Skill :<input type="checkbox" name="skill" value="Java">Java
+<tr>
+<td>
+Date of Birth :</td><td> <input type="date" name="dob"></td>
+</tr>
+
+<tr>
+<td>
+Address :</td>
+<td><textarea name="address" rows="10" cols="30"> </textarea> </td>
+</tr>
+
+<tr>
+<td>Skill :</td>
+<td><input type="checkbox" name="skill" value="Java">Java
 <input type="checkbox" name="skill" value="Spring">Spring 
-<input type="checkbox" name="skill" value="Hibernate">Hibernate<br>
-Location : <select name="location">
+<input type="checkbox" name="skill" value="Hibernate">Hibernate
+</td>
+</tr>
+
+<tr>
+<td>Location :</td>
+<td> <select name="location">
 <option value="Chennai">Chennai
 <option value="UP">UP
 <option value="Hyderabad">Hyderabad
-</select><br><br>
+</select>
+</td>
+</tr>
 
+<tr>
+<td>
 <input type="submit" value="Register">
+</td>
+<td>
 <input type="reset" value="Clear">
+</td>
+</tr>
+</table>
 </form>
+
+<a href="index.html">Home</a>
+
 <footer>
-copyright Cognizant Technology Solutions
+copyright 
 </footer>
+
 </body>
 
 
