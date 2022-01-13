@@ -2,42 +2,73 @@
 <html>
 <head>
 <style type="text/css">
-p.intro {
+.intro {
   background-color: yellow;
   color: blue;
 }
-div,p {
+.intro1
+{
+ background-color: green;
+ color: red;
+}
+div{
   background-color: cyan;
 }
-h1, h2, h3 
+h1,h2,h3 
 { 
 font-family: sans-serif ;
 color: yellow;
 }
+#p1
+{
+  color: red;
+}
 </style>
 
 </head>
+
 <body >
-<h1>CSS Selectors</h1>
+
+<h1>Heading 1</h1>
 <h2>Heading 2</h2>
-<h3 > Universal Selector</h3>
+<h3 > Heading 3</h3>
+
+<span class="intro">span with class intro </span>
 
 <p class="intro">
-First paragraph
+First paragraph with class intro
 </p>
+
 <p class="intro">
-Second paragraph
+Second paragraph with class intro
 </p>
-<p >
-third paragraph
+
+<p class="intro1">
+First paragraph with class intro1
 </p>
-<div >
-Division1
+
+<p class="intro1">
+Second paragraph with class intro1
+</p>
+
+<p id="p1">
+Paragraph with id p1
+</p>
+
+<div style="color: orange;height: 200px;width: 400px;background-color:blue;">
+Division1 with inline css
 <p> Paragraph inside div</p>
 </div>
+
+
 <div >
 Division2
 </div>
+
+<div>
+Division 3
+</div>
+
 </body>
 </html>
 
