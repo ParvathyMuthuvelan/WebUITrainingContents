@@ -7,20 +7,23 @@ function display()
 {
 
 		var index=document.f1.s1.selectedIndex;
-		alert(index);
-   a=document.f1.s1.options[index].text;
-  document.f1.t1.value=a;
+		alert("You selected item "+ (index+1));
+  // a=document.f1.s1.options[index].text;
+  
+
+
+document.f1.t1.value=document.f1.s1.value;
 }
 </script></head>
 <body>
-<form name=f1>
-<select name=s1 onChange='display()'>
+<form name="f1">
+<select name="s1" id="s1" onChange='display()'>
 <option value="Java">Java
 <option value="Spring">Spring
 <option value="Hibernate">Hibernate
 <option value="Struts">Struts
 </select>
-<input type=text name=t1>
+<input type="text" name="t1">
 </form>
 </body>
 </html>

@@ -4,20 +4,19 @@
 <script language=javascript>
 function col(color)
 {
-  //document.bgColor=color;
-alert("fn called");
-  window.status="The color is changed";
+  document.bgColor=color;
+ // window.status="The color is changed";
 }
 </script>
 </head>
 <body>
 <form name=f1>
-<input type="radio" name="r1"  onClick=col("#ff0000")>RED<br>
-<input type="radio" name="r1" onClick=col('#00ff00')>GREEN<br>
-<input type="radio" name="r1"  onClick=col('yellow')>YELLOW<br>
-<input type="radio" name="r1"  onClick=col('#0000ff')>BLUE<br>
-<input type="radio" name="r1" onClick=col('#00ffff')>CYAN<br>
-<input type="radio" name="r1" onClick=col('orange')>ORANGE
+<input type="radio" name="r1"  onClick="col('#ff0000')">RED<br>
+<input type="radio" name="r1" onClick="col('#00ff00')">GREEN<br>
+<input type="radio" name="r1"  onClick="col('yellow')">YELLOW<br>
+<input type="radio" name="r1"  onClick="col('#0000ff')">BLUE<br>
+<input type="radio" name="r1" onClick="col('#00ffff')">CYAN<br>
+<input type="radio" name="r1" onClick="col('orange')">ORANGE
 </form>
 </body>
 </html>

@@ -3,16 +3,16 @@
 
 <title>Insert title here</title>
 	<script>
-		function showText(msg)
+		function showText()
 		{
 		
 		var name=document.loginForm.uname.value;
 		alert('You entered '+name);
-		document.getElementById("text2").value=msg;
+		document.getElementById("text2").value=name;
 		}
-		function showMsg(txt)
+		function showMsg(name)
 		{
-		alert(txt  + ' received focus');
+		alert(name  + ' received focus');
 		
 		}
 	function myFunction() {
@@ -22,7 +22,7 @@
 </head>
 <body>
 <form name="loginForm">
-Enter text:<input name="uname" type="text" onkeyup="showText(this.value)"></input>
+Enter text:<input name="uname" type="text" onkeyup="showText()"></input>
 You entered:<input id="text2" type="text" ></input>
 <input type="text" name="username" onfocus="showMsg(this.name)">
 
