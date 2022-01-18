@@ -9,10 +9,14 @@
 <p id="demo"></p>
 
 <script>
-var d = new Date(2018, 11, 24);
+var d = new Date(2022, 0, 18);
 var d1=new Date();
 document.write("<br>Date="+ d);
 document.write("<br>Date="+ d1);
+document.write("<br>Current Month "+ d1.getMonth()) ;
+document.write("<br>Current Date "+ d1.getDate()) ;
+document.write("<br>Day number (0-6) "+ d.getDay()) ;
+document.write("<br>Current Time "+ d1.getHours()) ;
 document.write("<br>Current Month "+ (d1.getMonth()+1)) ;
 document.write("<br>"+ d.getFullYear());
 document.write("<br>"+Math.pow(8,2));

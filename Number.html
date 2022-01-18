@@ -8,12 +8,16 @@
 
 <p id="demo"></p>
 
+<p id="demo1"></p>
+
+<p id="demo2"></p>
 <script>
 var x = 123;
-document.getElementById("demo").innerHTML =
+document.getElementById("demo1").innerHTML =
   x.toString() + "<br>" +
    (123).toString() + "<br>" +
    (100 + 23).toString();
+
 document.getElementById("demo").innerHTML = 
   Number(true) + "<br>" +
   Number(false) + "<br>" +
@@ -25,10 +29,12 @@ document.getElementById("demo").innerHTML =
   Number("10,33") + "<br>" +
   Number("10 33") + "<br>" +
   Number("John");
-parseInt("10");         // returns 10
-parseInt("10.33");      // returns 10
-parseInt("10 20 30");   // returns 10
-parseInt("10 years");   // returns 10
+
+document.getElementById("demo2").innerHTML =
+parseInt("10") + "<br>"+
+parseInt("10.33") + "<br>"+    
+parseInt("10 20 30") +" <br>"+   
+parseInt("10 years")+"<br>"+
 parseInt("years 10"); 
 </script>
 

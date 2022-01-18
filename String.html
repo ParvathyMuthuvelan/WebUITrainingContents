@@ -11,14 +11,20 @@
 <script>
 var str = "Hello World";
 var pos = str.indexOf("o");
+
 document.write("Index of o="+pos+"<br>");
 var pos = str.lastIndexOf("o");
+
 document.write("Last Index of o="+pos+"<br>");
 var slen = str.length;
 var str = "Apple, Banana, Kiwi";
 var ch=str.charAt(3);
-//var res = str.substring(7, 13);
+
 document.write("<br>Character at 3rd index="+ ch);
+var res = str.substring(7, 13);
+document.write("<br>Substring="+res);
+var res1 = str.substring(7);
+document.write("<br>Substring="+res1);
 var text1 = "Hello World!";       // String
 var text2 = text1.toLowerCase(); 
 document.write("<br>"+text2);
@@ -29,7 +35,9 @@ var temp = "       Hello World!        ";
 document.write("<br>Before trim"+temp.length);
 var text=temp.trim()  ;
 document.write("<br>After trim "+text.length);
+
 document.write("<br>After trim "+text);
+
 var text="Microsoft";
 text=text.replace("Microsoft","W3Schools");
 document.write("<br>After replace "+text);
