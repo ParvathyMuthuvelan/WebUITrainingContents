@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Objects</h2>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<script>
+function emp(id,name,salary){  
+this.id=id;  
+this.name=name;  
+this.salary=salary;  
+this.changeSalary=changeSalary;  
+
+function changeSalary(newSalary){  
+this.salary=newSalary;  
+} 
+}  
+emp1=new emp(103,"Vimal Jaiswal",30000);  
+emp2=new emp(104,"Kamal",45000);  
+emp3=new emp(105,"Vimal",35000);  
+document.getElementById("demo1").innerHTML="<br>Employee Id:"+emp1.id+"<br> Name :"+emp1.name+"<br> Salary :"+emp1.salary; 
+document.getElementById("demo2").innerHTML="<br>Employee Id:"+emp2.id+"<br> Name :"+emp2.name+"<br> Salary :"+emp2.salary; 
+document.getElementById("demo3").innerHTML="<br>Employee Id:"+emp3.id+"<br> Name :"+emp3.name+"<br> Salary :"+emp3.salary; 
+emp3.changeSalary(50000);
+document.getElementById("demo4").innerHTML="<br>After changing salary Employee Id:"+emp3.id+"<br> Name :"+emp3.name+"<br> Salary :"+emp3.salary; 
+</script>
+
+</body>
+</html>
